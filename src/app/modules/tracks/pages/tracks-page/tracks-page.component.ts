@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TrackModel } from '@core/models/tracks.model';
 import { TrackService } from '@modules/tracks/services/track.service';
 import { Subscription } from 'rxjs';
-import * as dataRaw from '../../../../data/tracks.json'
+
 @Component({
   selector: 'app-tracks-page',
   templateUrl: './tracks-page.component.html',
@@ -17,24 +17,18 @@ export class TracksPageComponent implements OnInit {
   constructor(private trackService: TrackService) { }
 
   ngOnInit(): void {
-     const observer1$ = this.trackService.dataTracksTrending$
-     .subscribe(response => {
-       this.tracksTrendring = response;
-       this.tracksRandom = response;
-       console.log('Canciones trending', response)
-     })
+     this.trackService.getAllTracks$()
+        .subscribe((response:TrackModel[]) => {
+          console.log(response)
+          this.tracksTrendring = response;
+          this.tracksRandom = response;
+        })
 
-     const observer2$ = this.trackService.dataTracksRandom$
-     .subscribe(response => {
-       this.tracksRandom = [...this.tracksRandom, ...response];
-       console.log('Canciones Random', response)
-     })
-
-     this.listObservers$ = [observer1$,observer2$]
+     
   }
 
   ngOnDestroy():void{
-    this.listObservers$.forEach(u => u.unsubscribe)
+  
   }
 
 }
