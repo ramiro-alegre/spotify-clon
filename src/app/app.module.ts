@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FavoritePageComponent } from './modules/favorites/favorite-page/favorite-page.component';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @NgModule({
@@ -15,7 +16,7 @@ import { FavoritePageComponent } from './modules/favorites/favorite-page/favorit
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
