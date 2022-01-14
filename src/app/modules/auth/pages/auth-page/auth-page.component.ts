@@ -39,7 +39,7 @@ export class AuthPageComponent implements OnInit {
     this.AuthService.sendCredentials(email,password)
     .subscribe(response => {
       const token = response.result;
-      this.cookie.set('token', token, 4, '/');
+      this.cookie.set('token', token, 0, '/');
 
       this.router.navigate(['/', 'tracks']);
     }, err => {
