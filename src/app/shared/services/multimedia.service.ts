@@ -42,22 +42,22 @@ export class MultimediaService {
     this.audio.addEventListener('ended', this.setPlayerStatus)
   }
 
-  private setPlayerStatus(state:any):void{
-    console.log(state)
-    switch(state.type){
+  private setPlayerStatus = (state: any) => {
+    switch (state.type) { 
       case 'play':
-        this.playerStatus$.next('play'); 
-        break;
+        this.playerStatus$.next('play')
+        break
       case 'playing':
-        this.playerStatus$.next('playing'); 
-        break;
+        this.playerStatus$.next('playing')
+        break
       case 'ended':
-        this.playerStatus$.next('ended'); 
-        break;
+        this.playerStatus$.next('ended')
+        break
       default:
-        this.playerStatus$.next('paused'); 
-      break;
+        this.playerStatus$.next('paused')
+        break;
     }
+
   }
 
   public togglePlayer():void{

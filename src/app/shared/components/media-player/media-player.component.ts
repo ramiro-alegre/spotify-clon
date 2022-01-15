@@ -18,7 +18,6 @@ export class MediaPlayerComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
      const observer1$ = this.multimediaService.playerStatus$
       .subscribe(status => this.state = status);
-
       this.listObservers$ = [observer1$]
   }
   ngOnDestroy(): void {
@@ -32,6 +31,7 @@ export class MediaPlayerComponent implements OnInit, OnDestroy {
     const {x, width} = elNative.getBoundingClientRect()
     const clickX = clientX - x
     const percentageFromX = (clickX * 100) / width
+    console.log('Esto tiene status en media-player: ',this.state);
     this.multimediaService.seekAudio(percentageFromX)
   }
 }
