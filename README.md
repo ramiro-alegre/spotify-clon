@@ -2,26 +2,24 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
-## Development server
+## Images for example
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### LOGIN
 
-## Code scaffolding
+![Login](https://user-images.githubusercontent.com/64865940/149673490-363ae36a-ea2f-472e-bf51-3718e029e828.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### HOME
 
-## Build
+![Home](https://user-images.githubusercontent.com/64865940/149673514-287f04f2-e801-44b2-b414-ff2fa549f129.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### HOME WITH SONG IN PROGRESS
 
-## Running unit tests
+![HomeWithTrack](https://user-images.githubusercontent.com/64865940/149673517-1d55a58c-23c3-4100-832e-d8e2d4fa6b31.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## AD
 
-## Running end-to-end tests
+**If u use this project, need a Backend for correct functionality, use this:**
+> https://github.com/ramiro-alegre/spotify-clon-backend
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**This project was created with a udemy course, we only work with Angular and we centred on auth page and homepage, see here:**
+> https://www.udemy.com/certificate/UC-d14eed7d-1a99-4f16-a211-b20993989ac2/
